@@ -19,12 +19,26 @@ var server = http.createServer(router);
     })
 */
 var url = require("url");
+var moment = require("moment");
+moment.locale("es");
+var formatoFechaNatural = "MMMM DD, YYYY";
 var server = http.createServer(function(req,res){
     var objetoUrl = url.parse(req.url,true);
    if (req.url == "/"){
         fs.createReadStream(path.resolve(__dirname, 'client/index.html')).pipe(res)
    } else{
-       console.log(objetoUrl.pathname.slice(1));
+       var valorDado = objetoUrl.pathname.slice(1).split("%20").join(" ");
+       var unix = null;
+       var fechaNatural = null;
+       if (!isNaN(valorDado) && moment(valorDado, "X").isValid()){
+           unix = valorDado;
+           fechaNatural = moment(valorDado, "X").format(formatoFechaNatural);
+       } else if (moment(valorDado, formatoFechaNatural).isValid()){
+           unix = moment(valorDado, formatoFechaNatural).format("X");
+           fechaNatural = moment(valorDado, formatoFechaNatural).format(formatoFechaNatural);
+       }
+        var json = JSON.stringify({"unix": (unix)? +unix : null, "natural":fechaNatural});
+        res.end(json);
    }
 });
 server.listen(process.env.PORT || 3000, process.env.IP || "0.0.0.0", function(){
