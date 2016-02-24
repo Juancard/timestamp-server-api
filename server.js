@@ -14,10 +14,13 @@ var server = http.createServer(function(req,res){
         timestamp(res,req.url.slice(1));
    }
 });
+server.listen(process.env.PORT || 3000);
+/*
 server.listen(process.env.PORT || 3000, process.env.IP || "0.0.0.0", function(){
   var addr = server.address();
   console.log("Chat server listening at", addr.address + ":" + addr.port);
 });
+*/
 
 //Para manejo de archivos de diversos tipos
 // funciones tomadas de Node.js in action.
