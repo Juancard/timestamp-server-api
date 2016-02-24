@@ -3,6 +3,7 @@ moment.locale("es");
 var formatoFechaNatural = "MMMM DD, YYYY";
 
 module.exports = function(res,query){
+    query = query.split("%20").join("");
     var unix = null;
     var fechaNatural = null;
     if (!isNaN(query) && moment(query, "X").isValid()){
