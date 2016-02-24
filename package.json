@@ -4,15 +4,15 @@
   "description": "Una api para obtener la fecha en unix y lenguaje natural",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Juancard/timestamp-server-api.git",
+    "url": "https://github.com/Juancard/timestamp-server-api"
   },
   "author": "Juan Cardona <juan_cardona@outlook.com>",
   "dependencies": {
     "moment": "~2.11.2",
-    "mime": "~3.2.4",
+    "mime": "~3.2.4"
   }
 }
