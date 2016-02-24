@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "Una api para obtener la fecha en unix y lenguaje natural",
   "main": "server.js",
+  "scripts": {
+    "start": "node server.js" 
+  }
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Juancard/timestamp-server-api.git"
