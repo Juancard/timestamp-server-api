@@ -2,6 +2,9 @@
   "name": "server-api-timestamp",
   "version": "0.0.1",
   "description": "Una api para obtener la fecha en unix y lenguaje natural",
+  "engines": {
+    "node": "4.1.1"
+  }
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
@@ -13,6 +16,6 @@
   "author": "Juan Cardona <juan_cardona@outlook.com>",
   "dependencies": {
     "moment": "~2.11.2",
-    "mime": "~3.2.4"
+    "mime": "~1.3.4"
   }
 }
