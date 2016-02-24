@@ -3,8 +3,10 @@
 ## Historias de usuario:
 
 1) Puedo pasar un string como parametro, y se va a chequear para ver si ese string 
-contiene una fecha unix o una en lenguaje natural (ejemplo: Enero 1, 2016)
+contiene una fecha unix o una en lenguaje natural (ejemplo: Enero 1, 2016).
+
 2) Si es asi, devuelve ambas, es decir la fecha en unix y en lenguaje natural.
+
 3) Si no contiene una fecha Unix o natural, devuelve null para ambas propiedades.
 
 ## Example usage:
