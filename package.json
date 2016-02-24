@@ -4,7 +4,7 @@
   "description": "Una api para obtener la fecha en unix y lenguaje natural",
   "engines": {
     "node": "4.1.1"
-  }
+  },
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
