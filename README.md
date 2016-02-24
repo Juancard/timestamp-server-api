@@ -1,22 +1,21 @@
+# API: Servicio de Timestamp
 
-     ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
-    '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
-    |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
-    '  '--'\|  |' '-' ''  ''  '\ `-' | .'  /   |  ||  '--'  /|  `---.
-     `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
-    ----------------------------------------------------------------- 
+## Historias de usuario:
 
+1) Puedo pasar un string como parametro, y se va a chequear para ver si ese string 
+contiene una fecha unix o una en lenguaje natural (ejemplo: Enero 1, 2016)
+2) Si es asi, devuelve ambas, es decir la fecha en unix y en lenguaje natural.
+3) Si no contiene una fecha Unix o natural, devuelve null para ambas propiedades.
 
-Welcome to your Node.js project on Cloud9 IDE!
+## Example usage:
 
-This chat example showcases how to use `socket.io` with a static `express` server.
+```url
+https://timestamp-ms.herokuapp.com/Diciembre%2015,%202015
+https://timestamp-ms.herokuapp.com/1450137600
+```
 
-## Running the server
+## Example output:
 
-1) Open `server.js` and start the app by clicking on the "Run" button in the top menu.
-
-2) Alternatively you can launch the app from the Terminal:
-
-    $ node server.js
-
-Once the server is running, open the project in the shape of 'https://projectname-username.c9.io/'. As you enter your name, watch the Users list (on the left) update. Once you press Enter or Send, the message is shared with all connected clients.
+```json
+{ "unix": 1450137600, "natural": "Diciembre 15, 2015" }
+```
