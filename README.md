@@ -10,8 +10,8 @@ contiene una fecha unix o una en lenguaje natural (ejemplo: Enero 1, 2016)
 ## Example usage:
 
 ```url
-https://timestamp-server-api.herokuapp.com/Diciembre%2015,%202015
-https://timestamp-server-api.herokuapp.com/1450137600
+https://timestamp-juancard.herokuapp.com/Diciembre%2015,%202015
+https://timestamp-juancard.herokuapp.com/1450137600
 ```
 
 ## Example output:
