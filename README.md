@@ -9,14 +9,14 @@ contiene una fecha unix o una en lenguaje natural (ejemplo: Enero 1, 2016).
 
 3) Si no contiene una fecha Unix o natural, devuelve null para ambas propiedades.
 
-## Example usage:
+## Ejemplo de uso:
 
 ```url
 https://timestamp-juancard.herokuapp.com/Diciembre%2015,%202015
 https://timestamp-juancard.herokuapp.com/1450137600
 ```
 
-## Example output:
+## Ejemplo de salida:
 
 ```json
 { "unix": 1450137600, "natural": "Diciembre 15, 2015" }
