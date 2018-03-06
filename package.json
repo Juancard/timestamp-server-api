@@ -15,7 +15,7 @@
   },
   "author": "Juan Cardona <juan_cardona@outlook.com>",
   "dependencies": {
-    "moment": "~2.11.2",
-    "mime": "~1.3.4"
+    "moment": "~2.21.0",
+    "mime": "~1.2.7"
   }
 }
